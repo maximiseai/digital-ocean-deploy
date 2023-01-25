@@ -18,7 +18,7 @@ jobs:
         run: echo $GITHUB_SHA > $GITHUB_WORKSPACE/app/_meta
       
       - name: Build image
-        run: docker build -t registry.digitalocean.com/test-deploy-container/digital-ocean-deploy:$(echo $GITHUB_SHA | head -c7) .
+        run: docker build -t registry.digitalocean.com/maximiseai/digital-ocean-deploy:$(echo $GITHUB_SHA | head -c7) .
 
       - name: Instal doctl
         uses: digitalocean/action-doctl@v2
